@@ -4,12 +4,17 @@ input.onButtonPressed(Button.A, function () {
     colorbit_51bit.clear()
     basic.clearScreen()
 })
+input.onButtonPressed(Button.B, function () {
+    Leds = !(Leds)
+    led.enable(Leds)
+})
+let Leds = false
 let colorbit_51bit: colorbit.Strip = null
 colorbit_51bit = colorbit.initColorBit(DigitalPin.P2, BitColorMode.RGB)
 colorbit_51bit.setBrightness(16)
 colorbit_51bit.clear()
-led.enable(false)
 colorbit_51bit.show()
+Leds = true
 basic.forever(function () {
     for (let loop1 = 0; loop1 <= 4; loop1++) {
         for (let loop2 = 0; loop2 <= 4; loop2++) {
