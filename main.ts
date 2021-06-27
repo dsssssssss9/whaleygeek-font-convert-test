@@ -1,5 +1,8 @@
 input.onButtonPressed(Button.A, function () {
-    whaleysans.showNumber(19)
+    whaleysans.showNumber(22)
+})
+input.onButtonPressed(Button.AB, function () {
+    colorbit_51bit.clear()
 })
 input.onButtonPressed(Button.B, function () {
     for (let loop1 = 0; loop1 <= 4; loop1++) {
