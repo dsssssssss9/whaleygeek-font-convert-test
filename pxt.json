@@ -6,7 +6,6 @@
         "radio": "*",
         "microphone": "*",
         "WhaleySansFont": "github:makecode-extensions/whaleysansfont#v1.1.0",
-        "pxt-proportional-font": "github:lwchkg/pxt-proportional-font#v1.0.2",
         "colorbit": "github:51bit/colorbit#v0.1.2"
     },
     "files": [

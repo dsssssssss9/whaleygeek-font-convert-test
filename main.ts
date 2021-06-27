@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    whaleysans.showNumber(22)
+    whaleysans.showNumber(90)
 })
 input.onButtonPressed(Button.AB, function () {
     colorbit_51bit.clear()
