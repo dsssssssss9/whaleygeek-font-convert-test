@@ -11,7 +11,7 @@ input.onButtonPressed(Button.B, function () {
 let Leds = false
 let colorbit_51bit: colorbit.Strip = null
 colorbit_51bit = colorbit.initColorBit(DigitalPin.P2, BitColorMode.RGB)
-colorbit_51bit.setBrightness(16)
+colorbit_51bit.setBrightness(8)
 colorbit_51bit.clear()
 colorbit_51bit.show()
 Leds = true
