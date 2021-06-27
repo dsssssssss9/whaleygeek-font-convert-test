@@ -1,20 +1,28 @@
 def on_button_pressed_a():
-    whaleysans.show_number(90)
+    proportionalFont.show_string("Space The Final Frontier!", 150)
+    proportionalFont.show_space(3, 150)
+    colorbit_51bit.clear()
+    basic.clear_screen()
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
-def on_button_pressed_ab():
-    colorbit_51bit.clear()
-input.on_button_pressed(Button.AB, on_button_pressed_ab)
-
 def on_button_pressed_b():
+    global LedsOff
+    LedsOff = not (LedsOff)
+    led.enable(LedsOff)
+input.on_button_pressed(Button.B, on_button_pressed_b)
+
+LedsOff = False
+colorbit_51bit: colorbit.Strip = None
+colorbit_51bit = colorbit.init_color_bit(DigitalPin.P2, BitColorMode.RGB)
+colorbit_51bit.set_brightness(8)
+colorbit_51bit.clear()
+colorbit_51bit.show()
+
+def on_forever():
     for loop1 in range(5):
         for loop2 in range(5):
-            if led.point_brightness(loop1, loop2) > 0:
+            if led.point(loop1, loop2):
                 colorbit_51bit.draw_color_bit(loop1, loop2, colorbit.colors(BitColors.WHITE))
             else:
                 colorbit_51bit.draw_color_bit(loop1, loop2, colorbit.colors(BitColors.BLACK))
-input.on_button_pressed(Button.B, on_button_pressed_b)
-
-colorbit_51bit: colorbit.Strip = None
-colorbit_51bit = colorbit.init_color_bit(DigitalPin.P2, BitColorMode.RGB)
-colorbit_51bit.clear()
+basic.forever(on_forever)
