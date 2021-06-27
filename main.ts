@@ -14,3 +14,4 @@ input.onButtonPressed(Button.B, function () {
 })
 let colorbit_51bit: colorbit.Strip = null
 colorbit_51bit = colorbit.initColorBit(DigitalPin.P2, BitColorMode.RGB)
+colorbit_51bit.clear()
