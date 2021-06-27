@@ -1,8 +1,15 @@
 input.onButtonPressed(Button.A, function () {
-    whaleysans.showNumber(90)
+    whaleysans.showNumber(85)
 })
 input.onButtonPressed(Button.AB, function () {
     colorbit_51bit.clear()
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 })
 input.onButtonPressed(Button.B, function () {
     for (let loop1 = 0; loop1 <= 4; loop1++) {
@@ -18,3 +25,4 @@ input.onButtonPressed(Button.B, function () {
 let colorbit_51bit: colorbit.Strip = null
 colorbit_51bit = colorbit.initColorBit(DigitalPin.P2, BitColorMode.RGB)
 colorbit_51bit.clear()
+led.enable(false)
